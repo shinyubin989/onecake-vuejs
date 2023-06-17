@@ -2,11 +2,7 @@
 <div class="page">
   <div class="form-signin w-100 m-auto">
     <form @submit.prevent="login">
-<<<<<<< HEAD
       <img class="mb-4" src="@/assets/logo.png" alt="" width="72" height="57">
-=======
-      <img class="mb-4" src="@/assets/onecakeLogo.png" alt="" width="72" height="57">
->>>>>>> 7a754c4440863e87f02815dc11a3ecb9580604a1
       <h1 class="h3 mb-3 fw-normal" style="font-size: 33px; font-weight: 700">원케이크</h1>
 
       <div class="form-floating" style="margin-bottom: 10px;">
