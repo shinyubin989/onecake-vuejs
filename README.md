@@ -13,5 +13,3 @@
 ### 메뉴-가게
 ![image](https://github.com/shinyubin989/vuejs-practice/assets/69676101/af5d3c4b-7248-4ceb-9ffb-e0a722483ac0)
 
-
-

@@ -2,11 +2,7 @@
 <main class="d-flex flex-nowrap">
   <div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 280px; background-color: #ffe5f1;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-<<<<<<< HEAD
       <img src="@/assets/logo.png" width="40" height="32" />
-=======
-      <img src="@/assets/onecakeLogo.png" width="40" height="32" />
->>>>>>> 7a754c4440863e87f02815dc11a3ecb9580604a1
       <span class="fs-4" style="margin-left: 10px; font-weight: 550">원케이크</span>
     </a>
     <hr>

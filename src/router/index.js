@@ -6,7 +6,7 @@ import Signup from "@/views/Signup.vue";
 import Main from "@/views/Main.vue";
 import Menu from "@/views/Menu.vue";
 import Store from "@/views/Store.vue";
-import StoreMain from "@/views/StoreMain.vue";
+import StoreMain from "@/views/components/StoreMain.vue";
 
 import { createWebHistory, createRouter } from "vue-router";
 
