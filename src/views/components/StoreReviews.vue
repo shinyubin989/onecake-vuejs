@@ -46,7 +46,7 @@ export default {
     const headers = {
       Authorization: `Bearer ${accessToken}`
     };
-    axios.get('api/v1/consumer/stores/review/' + this.id , { 
+    axios.get('/api/v1/consumer/stores/review/' + this.id , {
       headers : headers,
       })
       .then(response => {

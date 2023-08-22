@@ -1,12 +1,12 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-// import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import Signup from "@/views/Signup.vue";
 import Main from "@/views/Main.vue";
-import Menu from "@/views/Menu.vue";
+import Stores from "@/views/Stores.vue";
 import Store from "@/views/Store.vue";
-import StoreMain from "@/views/components/StoreMain.vue";
+import OrderSheet from "@/views/OrderSheet.vue";
+import Orders from "@/views/Orders.vue"
+import SpecificOrder from "@/views/SpecificOrder.vue";
+import Chats from "@/views/Chats.vue";
 
 import { createWebHistory, createRouter } from "vue-router";
 
@@ -22,19 +22,39 @@ const routes = [
     component: Signup,
   },
   {
-    path: "/main",
+    path: "/",
     name: "Main",
     component: Main,
   },
   {
-    path: "/menu",
-    name: "Menu",
-    component: Menu,
+    path: "/stores",
+    name: "Stores",
+    component: Stores,
   },
   {
     path: "/store/:id",
     name: "Store",
     component: Store,
+  },
+  {
+    path: "/store/:storeId/ordersheet/:menuId",
+    name: "OrderSheet",
+    component: OrderSheet,
+  },
+  {
+    path: "/orders",
+    name: "Orders",
+    component: Orders,
+  },
+  {
+    path: "/orders/:id",
+    name: "SpecificOrder",
+    component: SpecificOrder,
+  },
+  {
+    path: "/chats",
+    name: "Chats",
+    component: Chats,
   },
 ];
 
@@ -44,49 +64,3 @@ const router = createRouter({
 });
 
 export default router;
-// Vue.use(VueRouter);
-
-// const routes = [
-//   // {
-//   //   path: "/",
-//   //   name: "Home",
-//   //   component: Home,
-//   // },
-//   {
-//     path: "/login",
-//     name: "Login",
-//     component: Login,
-//   },
-//   {
-//     path: "/signup",
-//     name: "Signup",
-//     component: Signup,
-//   },
-// ];
-
-// const router = new VueRouter({
-//   mode: "history",
-//   base: process.env.BASE_URL,
-//   routes,
-// });
-
-// export default router;
-
-// export const router = VueRouter.createRouter({
-
-//   history: VueRouter.createWebHashHistory(),
- 
-//   routes: [
-//     {
-//       path: "/login",
-//       name: "Login",
-//       component: Login,
-//     },
-//     {
-//       path: "/signup",
-//       name: "Signup",
-//       component: Signup,
-//     },
-//   ]
- 
-//  })

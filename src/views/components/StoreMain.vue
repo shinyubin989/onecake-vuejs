@@ -8,28 +8,8 @@
         </div>
       </div>
       <div class="store-description">
-        <h1 style="font-weight: 800; margin-top:100px; color: rgb(50,50,50);">{{ item.storeName }} </h1>
+        <h1 style="font-weight: 800; margin-top:150px; color: rgb(50,50,50);">{{ item.storeName }} </h1>
         <h4 style="margin-top:30px">{{ item.storeDescription }}</h4>
-        <!-- <div class="row">
-          <div class="card">
-            <div class="col-sm-6">
-              <div class="card-body">
-                <img v-if="item.isLiked" src="@/assets/heart-fill.svg" @click="pressHeart(item, $event)" />
-                <img v-else src="@/assets/heart.svg" @click="pressHeart(item)"/>
-                <span> 찜 {{item.likeNum}} </span>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="col-sm-6">
-              <div class="card-body">
-                <img v-if="item.isLiked" src="@/assets/heart-fill.svg" @click="pressHeart(item, $event)" />
-                <img v-else src="@/assets/heart.svg" @click="pressHeart(item)"/>
-                <span> 찜 {{item.likeNum}} </span>
-              </div>
-            </div>
-          </div> -->
-        <!-- </div> -->
         <div class="card-group" style="margin-top:50px;">
           <div class="card" @click="pressHeart(item, $event)">
               <div class="card-body">
@@ -41,7 +21,7 @@
                 
               </div>
           </div>
-          <div class="card">
+          <div class="card" @click="pressChat()">
               <div class="card-body">
                 <span style="margin-left:10px;">
                   <img src="@/assets/chat-dots.svg" @click="pressChat(item, $event)" />
@@ -51,7 +31,7 @@
           </div>
         </div>
         
-        <button class="btn btn-primary mx-auto btn-lg" type="button" style="background-color: #ff3096; border: none; width:100%; margin-top:30px;">주문서 작성하러가기</button>
+<!--        <button class="btn btn-primary mx-auto btn-lg" type="button" style="background-color: #ff3096; border: none; width:100%; margin-top:30px;">주문서 작성하러가기</button>-->
       </div>
     </div>
 
@@ -85,7 +65,7 @@ export default {
       const headers = {
         Authorization: `Bearer ${accessToken}`
       };
-      axios.post('api/v1/consumer/stores/' + this.id + '/like', {}, {headers})
+      axios.post('/api/v1/consumer/stores/' + this.id + '/like', {}, {headers})
       .then(response => {
         // this.items = response.data;
         if(item.isLiked){
@@ -101,13 +81,28 @@ export default {
         console.log(error); // 에러 메시지 출력
       });
     },
+    pressChat(){
+      const accessToken = localStorage.getItem('accessToken');
+      const headers = {
+        Authorization: `Bearer ${accessToken}`
+      };
+      axios.post('/api/v1/consumer/chat',{"storeId":this.id}, {
+        headers : headers,
+      })
+      .then(response => {
+        window.open(this.item.chatUrl, '_blank');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    }
   },
   mounted() {
     const accessToken = localStorage.getItem('accessToken');
     const headers = {
       Authorization: `Bearer ${accessToken}`
     };
-    axios.get('api/v1/consumer/stores/' + this.id + '/mainInfo', { 
+    axios.get('/api/v1/consumer/stores/' + this.id + '/mainInfo', {
       headers : headers,
       })
       .then(response => {

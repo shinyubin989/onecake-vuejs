@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     signup() {
-      axios.post('api/v1/auth/signup', {
+      axios.post('/api/v1/auth/signup', {
         name: this.name,
         user_id: this.userId,
         password: this.password,

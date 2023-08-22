@@ -59,6 +59,14 @@ export default {
     this.id = this.$route.params.id
   },
   methods: {
+    scrollToSection() {
+      // 스크롤 이동 로직을 여기에 구현합니다.
+      const targetElement = document.querySelector('.target-section'); // 이동할 대상 섹션의 선택자
+      if (targetElement) {
+        const yOffset = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: yOffset, behavior: 'smooth' });
+      }
+    },
   },
 }
 </script>

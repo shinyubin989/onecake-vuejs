@@ -32,7 +32,7 @@ import StoreItem from '@/views/components/StoreItem.vue';
 import '@/index.css'
 
 export default {
-  name: "Menu",
+  name: "Stores",
   components: {
     Sidebar,
     Header,
@@ -49,7 +49,7 @@ export default {
       const headers = {
         Authorization: `Bearer ${accessToken}`
       };
-      axios.get('api/v1/consumer/stores/main', {headers})
+      axios.get('/api/v1/consumer/stores/main', {headers})
       .then(response => {
         this.items = response.data;
       })
@@ -63,7 +63,7 @@ export default {
       const headers = {
         Authorization: `Bearer ${accessToken}`
       };
-      axios.get('api/v1/consumer/stores/review', {headers})
+      axios.get('/api/v1/consumer/stores/review', {headers})
       .then(response => {
         this.items = response.data;
       })
@@ -81,7 +81,7 @@ export default {
     const headers = {
       Authorization: `Bearer ${accessToken}`
     };
-    axios.get('api/v1/consumer/stores/main', { 
+    axios.get('/api/v1/consumer/stores/main', {
       headers : headers,
       })
       .then(response => {
