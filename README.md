@@ -19,6 +19,14 @@
 ![image](https://github.com/shinyubin989/vuejs-practice/assets/69676101/e38df213-928d-4201-bb25-4bf77c30ebeb)
 
 
+### 주문내역 페이지
+![image](https://github.com/shinyubin989/vuejs-practice/assets/69676101/3454f77c-de74-4994-b7f7-a21a1e42756e)
+
+
+### 상세 주문내역 모달
+![image](https://github.com/shinyubin989/vuejs-practice/assets/69676101/f365542b-cc77-408d-8260-9a8839f0b3f0)
+
+
 ### 회원가입
 ![image](https://github.com/shinyubin989/vuejs-practice/assets/69676101/3e5a92b3-aa42-46d9-b24d-8b0daddc898c)
 
